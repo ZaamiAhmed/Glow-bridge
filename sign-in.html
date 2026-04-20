@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In | GlowBridge</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .auth-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-main);
+            padding: 2rem;
+        }
+        .auth-card {
+            background: white;
+            width: 100%;
+            max-width: 440px;
+            padding: 3rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            text-align: center;
+            box-shadow: var(--shadow-soft);
+        }
+        .auth-logo {
+            font-family: var(--font-heading);
+            font-size: 1.75rem;
+            color: var(--text-main);
+            display: block;
+            margin-bottom: 2.5rem;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+        .form-label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+        .form-input {
+            width: 100%;
+            padding: 0.85rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            font-family: var(--font-sans);
+            font-size: 0.95rem;
+            background: var(--bg-main);
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        .form-input:focus {
+            border-color: var(--accent-dark);
+            background: white;
+        }
+        .auth-btn {
+            width: 100%;
+            margin-top: 1rem;
+        }
+        .auth-links {
+            margin-top: 2rem;
+            font-size: 0.85rem;
+        }
+        .auth-links a {
+            color: var(--text-main);
+            font-weight: 500;
+            text-decoration: underline;
+            text-decoration-color: var(--border);
+        }
+        .auth-links a:hover {
+            text-decoration-color: var(--text-main);
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-container fade-in-up visible">
+        <div class="auth-card">
+            <a href="index.html" class="auth-logo">GlowBridge.</a>
+            <h2 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Welcome back</h2>
+            <p style="font-size: 0.9rem; margin-bottom: 2rem;">Sign in to your dashboard.</p>
+            
+            <form action="#" method="get">
+                <div class="form-group">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" class="form-input" placeholder="name@company.com" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" style="display: flex; justify-content: space-between;">
+                        Password
+                        <a href="#" style="font-weight: normal; color: var(--text-muted); text-decoration: none;">Forgot?</a>
+                    </label>
+                    <input type="password" class="form-input" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="btn-primary auth-btn">Sign In</button>
+            </form>
+            
+            <div class="auth-links">
+                Don't have an account? <a href="apply.html">Apply for access</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
